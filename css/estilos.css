@@ -1,0 +1,420 @@
+@charset "UTF-8";
+/*body*/
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 42px;
+  text-decoration: none;
+}
+
+body .nav-link {
+  color: #594839;
+}
+
+.container {
+  margin: 0px;
+  padding: 0px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 0.4fr 2.4fr 0.2fr;
+      grid-template-rows: 0.4fr 2.4fr 0.2fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+      grid-template-areas: "Header Header" "Section Section" "Footer Footer";
+  width: 100%;
+  height: 100%;
+  display: contents;
+  margin: 0px;
+  pad: 0px;
+}
+
+/*desktop*/
+@media only screen and (min-width: 1100px) {
+  .Header {
+    background-color: #a69076;
+    color: #594839;
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: Header;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    color: #a69076;
+    /* estos modificadores van por fuera porque se rompen al ser incluídos en header_menu
+                        porque son extraídos de Bootstrap*/
+  }
+  .Header .header_logo {
+    margin: auto;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .Header .header_menu {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .Header .header_menu--ul {
+    list-style: none;
+    display: contents;
+  }
+  .Header .header_menu--ul {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .Section {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: Section;
+    background-color: #594839;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    color: #A69076;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    padding: 20px;
+    display: -webkit-box-flex;
+  }
+  .Section .section_dos {
+    width: 50%;
+    text-align: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .Section .section_dos h1 {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 54px;
+    line-height: 63px;
+  }
+  .Section .section_dos h2 {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 45px;
+  }
+  .Section .section_dos .section_dos--listaServicios {
+    list-style: none;
+  }
+  .Section .section_dos .section_dos--article, .Section .section_dos .section_uno .section_uno--article, .Section .section_uno .section_dos .section_uno--article {
+    width: 100%;
+    text-align: center;
+  }
+  .Section .section_dos .section_dos--article .section_dos--articleTitle, .Section .section_dos .section_uno .section_uno--article .section_dos--articleTitle, .Section .section_uno .section_dos .section_uno--article .section_dos--articleTitle, .Section .section_uno .section_uno--article .section_dos .section_dos--article .section_uno--articleTitle, .Section .section_dos .section_uno .section_uno--article .section_uno--articleTitle, .Section .section_uno .section_dos .section_uno--article .section_uno--articleTitle {
+    font-size: 36px;
+  }
+  .Section .section_uno {
+    width: 50%;
+    text-align: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    /*  SECTION UNO ARTICLE TIENE IDÉNTICO ESTILO A SECTION DOS ARTICLE*/
+  }
+  .Section .section_uno .section_uno--contacto {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: Section;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    background-color: #594839;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    color: #A69076;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    padding: 20px;
+  }
+  .Section .section_uno .section_uno--iframe {
+    width: -webkit-fill-available;
+    height: 500px;
+  }
+  .Footer {
+    background-color: #a69076;
+    color: #594839;
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: Footer;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
+/*fin desktop*/
+/*tablets*/
+@media only screen and (max-width: 1100px) {
+  .Header {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: Header;
+    background-color: #a69076;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    color: #594839;
+  }
+  .Header .header_logo {
+    margin: auto;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .Header .header_menu {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .Header .header_menu .header_menu--ul {
+    list-style: none;
+    display: contents;
+    margin: auto;
+  }
+  .Header .header_menu .header_menu--li {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .Section {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: Section;
+    background-color: #594839;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    color: #A69076;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    padding: 20px;
+  }
+  .Section .section_uno {
+    -ms-flex-item-align: auto;
+        -ms-grid-row-align: auto;
+        align-self: auto;
+    text-align: center;
+    /*IFRAME COMOLLEGAR.HTML*/
+    /*FIN IFRAME*/
+  }
+  .Section .section_uno .section_uno--article {
+    width: 100%;
+    text-align: center;
+  }
+  .Section .section_uno .section_uno--article .section_uno--articleTitle {
+    font-size: 36px;
+  }
+  .Section .section_uno .section_uno--fotoServicios {
+    max-width: -webkit-fill-available;
+  }
+  .Section .section_uno .section_uno--contacto {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: Section;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    background-color: #594839;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    color: #A69076;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    padding: 20px;
+  }
+  .Section .section_uno .section_uno--iframe {
+    width: 100%;
+  }
+  .Section .section_dos {
+    text-align: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .Section .section_dos .section_dos--article, .Section .section_dos .section_uno .section_uno--article, .Section .section_uno .section_dos .section_uno--article {
+    width: 100%;
+    text-align: center;
+  }
+  .Section .section_dos .section_dos--article .section_dos--articleTitle, .Section .section_dos .section_uno .section_uno--article .section_dos--articleTitle, .Section .section_uno .section_dos .section_uno--article .section_dos--articleTitle, .Section .section_uno .section_uno--article .section_dos .section_dos--article .section_uno--articleTitle, .Section .section_dos .section_uno .section_uno--article .section_uno--articleTitle, .Section .section_uno .section_dos .section_uno--article .section_uno--articleTitle {
+    font-size: 36px;
+  }
+  .Footer {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: Footer;
+    background-color: #a69076;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    color: #594839;
+  }
+}
+
+/*fin tablets*/
+/* celulares*/
+@media only screen and (max-width: 600px) {
+  .Header {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: Header;
+    background-color: #a69076;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    color: #594839;
+  }
+  .Header .header_logo {
+    margin: auto;
+  }
+  .Header .header_menu {
+    width: 30%;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .Header .header_menu .header_menu--ul {
+    list-style: none;
+    display: contents;
+  }
+  .Header .header_menu .header_menu--li {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .Section {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: Section;
+    background-color: #594839;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    color: #A69076;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    padding: 20px;
+  }
+  .Section .sectionUno {
+    -ms-flex-item-align: auto;
+        -ms-grid-row-align: auto;
+        align-self: auto;
+    /* sectionContacto tiene un estilo distinto para trabajar bootstrap,
+            además es un section con un elemento y no dos */
+    /* FIN SECTION CONTACTO*/
+  }
+  .Section .sectionUno .section_uno--iframe {
+    width: 100%;
+  }
+  .Section .sectionUno .section_uno--contacto {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: Section;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    background-color: #594839;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    color: #A69076;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    padding: 20px;
+  }
+  .Section .sectionUno .section_uno--fotoServicios {
+    max-width: -webkit-fill-available;
+  }
+  .Section .sectionDos {
+    text-align: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  /*En celulares ESCONDEMOS el footer por una cuestión estética y de estilo*/
+  .Footer {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: Footer;
+    background-color: #a69076;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    color: #594839;
+  }
+}
+
+/*fin celulares*/
+/*# sourceMappingURL=estilos.css.map */
