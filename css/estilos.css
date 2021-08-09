@@ -112,10 +112,17 @@ body .nav-link {
     list-style: none;
   }
   .Section .section_dos .section_dos--article, .Section .section_dos .section_uno .section_uno--article, .Section .section_uno .section_dos .section_uno--article {
-    width: 100%;
+    width: auto;
     text-align: center;
   }
   .Section .section_dos .section_dos--article .section_dos--articleTitle, .Section .section_dos .section_uno .section_uno--article .section_dos--articleTitle, .Section .section_uno .section_dos .section_uno--article .section_dos--articleTitle, .Section .section_uno .section_uno--article .section_dos .section_dos--article .section_uno--articleTitle, .Section .section_dos .section_uno .section_uno--article .section_uno--articleTitle, .Section .section_uno .section_dos .section_uno--article .section_uno--articleTitle {
+    font-size: 36px;
+  }
+  .Section .section_dos .section_uno--article {
+    width: auto;
+    text-align: center;
+  }
+  .Section .section_dos .section_uno--article .section_uno--articleTitle {
     font-size: 36px;
   }
   .Section .section_uno {
@@ -151,6 +158,9 @@ body .nav-link {
   .Section .section_uno .section_uno--iframe {
     width: -webkit-fill-available;
     height: 500px;
+  }
+  .Section article {
+    text-align: center;
   }
   .Footer {
     background-color: #a69076;
